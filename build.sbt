@@ -2,6 +2,8 @@ ThisBuild / version := "0.1.0-SNAPSHOT"
 
 ThisBuild / scalaVersion := "2.13.10"
 
+ThisBuild / crossScalaVersions := Seq("2.13.10", "3.2.1")
+
 enablePlugins(JmhPlugin)
 
 lazy val root = (project in file("."))

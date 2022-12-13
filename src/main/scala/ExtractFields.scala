@@ -1,5 +1,7 @@
 package com.github.pjfanning.jackson.scala
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+
 object ExtractFields {
   def genJson(num: String): String = {
     val stringBuilder = new StringBuilder
@@ -8,4 +10,5 @@ object ExtractFields {
   }
 }
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 case class ExtractFields(s: String, i: Int)
