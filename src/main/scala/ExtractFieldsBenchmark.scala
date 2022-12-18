@@ -1,6 +1,7 @@
 package com.github.pjfanning.jackson.scala
 
 import org.openjdk.jmh.annotations.Benchmark
+import org.openjdk.jmh.infra.Blackhole
 
 import java.nio.charset.StandardCharsets
 
@@ -17,12 +18,12 @@ class ExtractFieldsBenchmark extends CommonParams {
   val mapper = JacksonUtil.createJacksonMapper()
 
   @Benchmark
-  def deser1000 = {
-    mapper.readValue(test1000, classOf[ExtractFields])
+  def deser1000(blackhole: Blackhole) = {
+    blackhole.consume(mapper.readValue(test1000, classOf[ExtractFields]))
   }
 
   @Benchmark
-  def deser1000000 = {
-    mapper.readValue(test1000000, classOf[ExtractFields])
+  def deser1000000(blackhole: Blackhole) = {
+    blackhole.consume(mapper.readValue(test1000000, classOf[ExtractFields]))
   }
 }
