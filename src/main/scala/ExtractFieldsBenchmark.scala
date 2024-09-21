@@ -17,12 +17,12 @@ class ExtractFieldsBenchmark extends CommonParams {
   val test1000000 = ExtractFields.genJson(val1000000).getBytes(StandardCharsets.UTF_8)
   val mapper = JacksonUtil.createJacksonMapper()
 
-  @Benchmark
+  //@Benchmark
   def deser1000(blackhole: Blackhole) = {
     blackhole.consume(mapper.readValue(test1000, classOf[ExtractFields]))
   }
 
-  @Benchmark
+  //@Benchmark
   def deser1000000(blackhole: Blackhole) = {
     blackhole.consume(mapper.readValue(test1000000, classOf[ExtractFields]))
   }
