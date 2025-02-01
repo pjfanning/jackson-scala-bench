@@ -1,7 +1,8 @@
-package com.github.pjfanning.jackson.scala
+package common
+
+import org.openjdk.jmh.annotations._
 
 import java.util.concurrent.TimeUnit
-import org.openjdk.jmh.annotations._
 
 @State(Scope.Thread)
 @Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)

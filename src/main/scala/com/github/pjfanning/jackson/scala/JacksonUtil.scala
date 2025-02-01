@@ -1,5 +1,8 @@
 package com.github.pjfanning.jackson.scala
 
+import scala.collection.immutable.BitSet
+import scala.collection.mutable
+
 import com.fasterxml.jackson.annotation.JsonInclude.Include
 import com.fasterxml.jackson.core.{JsonFactory, JsonFactoryBuilder, StreamReadFeature, StreamWriteFeature}
 import com.fasterxml.jackson.core.json.JsonWriteFeature
@@ -8,9 +11,6 @@ import com.fasterxml.jackson.databind.{DeserializationFeature, ObjectMapper, Ser
 import com.fasterxml.jackson.databind.module.SimpleModule
 import com.fasterxml.jackson.module.scala.deser.{ImmutableBitSetDeserializer, MutableBitSetDeserializer}
 import com.fasterxml.jackson.module.scala.{BitSetDeserializerModule, ClassTagExtensions, DefaultScalaModule}
-
-import scala.collection.immutable.BitSet
-import scala.collection.mutable
 
 object JacksonUtil {
 

@@ -5,7 +5,7 @@ import org.openjdk.jmh.infra.Blackhole
 
 import java.nio.charset.StandardCharsets
 
-class ExtractFieldsBenchmark extends CommonParams {
+class ExtractFieldsBenchmark extends common.CommonParams {
   val (val1000, val1000000) = {
     val stringBuilder = new StringBuilder
     (0 until 1000).foreach(_ => stringBuilder.append(7))
