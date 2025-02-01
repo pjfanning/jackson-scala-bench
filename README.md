@@ -1,5 +1,5 @@
 # jackson-scala-bench
 
 ```
-sbt "Jmh/run -i 1 -wi 1 -f 1 .*Extract*.*"
+sbt "Jmh/run -i 3 -wi 2 -f1 -t5 .*RNG*.*"
 ```
